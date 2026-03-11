@@ -4,6 +4,7 @@
 <title>CHICKLOB</title>
 
 <style>
+
 body{
 background:#0b1c2c;
 color:white;
@@ -13,45 +14,79 @@ padding:40px;
 }
 
 h1{
-font-size:50px;
+font-size:60px;
+margin-bottom:10px;
+}
+
+h2{
+color:#00ffd5;
 }
 
 img{
-width:200px;
+width:220px;
 margin-top:20px;
 }
 
 .box{
 background:#132c44;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
 margin-top:30px;
 }
-</style>
 
+.button{
+display:inline-block;
+padding:15px 30px;
+margin:10px;
+background:#00ffd5;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.button:hover{
+background:white;
+}
+
+</style>
 </head>
 
 <body>
 
 <h1>🐔🦞 CHICKLOB</h1>
+
 <h2>The Coldest Meme on Solana ❄️</h2>
 
 <img src="logo.png">
 
 <div class="box">
+
 <p>
-Chicken + Lobster = The Coldest Meme on Solana.
+Chicken + Lobster = The Coldest Meme Coin on Solana.
 </p>
 
 <p>
-Born on Solana. Built for memes. Powered by the community.
+Built for memes. Powered by community.
 </p>
 
 <p>
-Contract Address:<br>
+Contract Address:
+<br>
 HyBEEKVwy23rmfT8sGdLQ9jU18vSLy7RVdWVSoivpump
 </p>
+
 </div>
+
+<br>
+
+<a class="button" href="#">BUY CHICKLOB</a>
+
+<a class="button" href="#">DEXSCREENER</a>
+
+<a class="button" href="#">TELEGRAM</a>
+
+<a class="button" href="#">TWITTER</a>
 
 </body>
 </html>

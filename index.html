@@ -1,246 +1,202 @@
-<!DOCTYPE html><html lang="en">
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CHICKLOB — The Coldest Meme on Solana</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"><style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicklob Coin ❄️</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-font-family:'Roboto',sans-serif;
-background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1a1a2e);
-background-size:400% 400%;
-animation:gradient 12s ease infinite;
-color:white;
+  font-family:'Roboto',sans-serif;
+  background:linear-gradient(135deg,#141e30,#243b55);
+  color:white;
+  position: relative;
+  overflow-x: hidden;
 }
 
-@keyframes gradient{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+/* Snow animation */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 1em;
+  color: #fff;
+  user-select: none;
+  z-index: 9999;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Logo animation */
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
 }
 
 /* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
-}
-
-nav h2{
-color:#00eaff;
-}
-
-nav a{
-text-decoration:none;
-margin-left:20px;
-color:white;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#00eaff;
-}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(0,0,0,0.3);backdrop-filter:blur(10px);}
+nav h2{ color:#00eaff; }
+nav a{text-decoration:none;margin-left:20px;color:white;font-weight:bold;}
+nav a:hover{ color:#00eaff; }
 
 /* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h1{
-font-size:64px;
-color:#00eaff;
-margin-bottom:10px;
-}
-
-.hero img{
-margin:20px 0;
-}
-
-.hero p{
-font-size:22px;
-margin-bottom:30px;
-}
-
+.hero{text-align:center;padding:120px 20px;}
+.hero h1{ font-size:60px; margin-bottom:20px; color:#00eaff; }
+.hero p{ font-size:20px; margin-bottom:30px; }
 .button{
-display:inline-block;
-padding:14px 35px;
-background:#00eaff;
-color:black;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+  display:inline-block;
+  margin:5px;
+  padding:14px 35px;
+  background:linear-gradient(90deg,#00eaff,#00ffaa);
+  color:black;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:16px;
+  transition:0.4s;
 }
-
 .button:hover{
-transform:scale(1.05);
+  transform:scale(1.1) rotate(-2deg);
+  box-shadow:0 0 15px #00ffaa;
 }
 
 /* CONTAINER */
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:40px 20px;
-}
-
-.section{
-background:rgba(255,255,255,0.05);
-padding:40px;
-margin-bottom:30px;
-border-radius:12px;
-backdrop-filter:blur(10px);
-}
-
-.section h2{
-margin-bottom:20px;
-color:#00eaff;
-}
-
-ul{
-line-height:1.8;
-}
+.container{ max-width:1000px; margin:auto; padding:40px 20px; }
+.section{ background:rgba(255,255,255,0.05); padding:40px; margin-bottom:30px; border-radius:12px; backdrop-filter:blur(10px);}
+.section h2{ margin-bottom:20px; color:#00eaff; }
+ul{ line-height:1.8; }
 
 /* CONTRACT */
-
-.contract{
-background:black;
-padding:15px;
-border-radius:6px;
-margin-top:10px;
-font-family:monospace;
-word-break:break-all;
-}
+.contract{ background:black; padding:15px; border-radius:6px; margin-top:10px; font-family:monospace; }
 
 /* COPY BUTTON */
-
-.copy{
-margin-top:10px;
-padding:8px 15px;
-background:#00eaff;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
+.copy{ margin-top:10px; padding:8px 15px; background:#00eaff; border:none; border-radius:5px; cursor:pointer; }
 
 /* SOCIAL */
-
-.social a{
-display:inline-block;
-margin:10px;
-padding:10px 20px;
-background:#00eaff;
-color:black;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* MEME GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
+.social a{ display:inline-block; margin:10px; padding:10px 20px; background:#00eaff; color:black; border-radius:6px; text-decoration:none; font-weight:bold; }
 
 /* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-color:#aaa;
-}
+footer{ text-align:center; padding:30px; color:#aaa; }
 
 /* MOBILE */
-
 @media(max-width:700px){
-
-.hero h1{
-font-size:42px;
+  .hero h1{ font-size:40px; }
+  nav{ flex-direction:column; }
 }
+</style>
+</head>
+<body>
 
-nav{
-flex-direction:column;
-}
+<!-- Snowflakes container -->
+<div id="snow-container"></div>
 
-}
-
-</style></head><body><!-- NAVBAR --><nav><h2>🐔🦞 CHICKLOB</h2><div><a href="#about">About</a>
+<!-- NAVBAR -->
+<nav>
+<h2>🐔 Chicklob</h2>
+<div>
+<a href="#about">About</a>
 <a href="#tokenomics">Tokenomics</a>
 <a href="#roadmap">Roadmap</a>
 <a href="#community">Community</a>
+</div>
+</nav>
 
-</div></nav><!-- HERO --><section class="hero"><h1>CHICKLOB</h1><img src="logo.png" width="230"><p>The Coldest Meme on Solana ❄️</p><a href="#" class="button">Buy Chicklob</a>
+<!-- HERO -->
+<section class="hero">
+<img src="https://raw.githubusercontent.com/Fariama/chicklob/main/logo.png" class="logo" alt="CHICKLOB Logo">
+<h1>Chicklob Coin ❄️</h1>
+<p>The Coldest Meme on Solana</p>
+<a href="#" class="button">Buy Chicklob</a>
+</section>
 
-</section><div class="container"><!-- CONTRACT --><div class="section"><h2>Contract Address</h2><div class="contract" id="contract">
-0x0000000000000000000000000000000000000000
-</div><button class="copy" onclick="copyContract()">Copy Address</button>
+<div class="container">
 
-</div><!-- ABOUT --><div class="section" id="about"><h2>About Chicklob</h2><p>CHICKLOB is a community driven meme coin born from the strange cold corners of crypto.
-Built for memes, culture and viral growth.
+<!-- CONTRACT -->
+<div class="section">
+<h2>Contract Address</h2>
+<div class="contract" id="contract">0x0000000000000000000000000000000000000000</div>
+<button class="copy" onclick="copyContract()">Copy Address</button>
+</div>
 
-No complicated promises.
-Just memes and a cold community.
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>About Chicklob</h2>
+<p>Chicklob Coin is a community powered meme cryptocurrency built for fun, decentralization, and viral growth. Powered by its community, Chicklob aims to become the next big meme coin in crypto.</p>
+</div>
 
-</p></div><!-- ORIGIN --><div class="section"><h2>The Origin</h2><p>Not a chicken.
-Not a lobster.
+<!-- TOKENOMICS -->
+<div class="section" id="tokenomics">
+<h2>Tokenomics</h2>
+<ul>
+<li>Total Supply: 1,000,000,000</li>
+<li>Liquidity: Locked</li>
+<li>Community Rewards: 60%</li>
+<li>Marketing: 20%</li>
+<li>Development: 20%</li>
+</ul>
+</div>
 
-Something colder.
+<!-- ROADMAP -->
+<div class="section" id="roadmap">
+<h2>Roadmap</h2>
+<ul>
+<li>Phase 1 — Token Launch</li>
+<li>Phase 2 — Community Building</li>
+<li>Phase 3 — Exchange Listings</li>
+<li>Phase 4 — Global Marketing</li>
+<li>Phase 5 — Ecosystem Expansion</li>
+</ul>
+</div>
 
-CHICKLOB appeared quietly in the frozen corners of crypto.
-No noise. No hype.
-
-Just memes.
-
-</p></div><!-- TOKENOMICS --><div class="section" id="tokenomics"><h2>Tokenomics</h2><ul><li>Total Supply — 1,000,000,000</li>
-<li>Liquidity — Locked</li>
-<li>Community — 60%</li>
-<li>Marketing — 20%</li>
-<li>Development — 20%</li></ul></div><!-- HOW TO BUY --><div class="section"><h2>How To Buy</h2><ul><li>Create a wallet (Phantom / Solflare)</li>
-<li>Buy SOL</li>
-<li>Go to Pump.fun</li>
-<li>Paste CHICKLOB contract</li>
-<li>Swap SOL for CHICKLOB</li></ul></div><!-- CHART --><div class="section"><h2>Live Chart</h2><p>Chart will appear after launch.</p></div><!-- ROADMAP --><div class="section" id="roadmap"><h2>Roadmap</h2><ul><li>Phase 1 — Meme Creation</li>
-<li>Phase 2 — Community Growth</li>
-<li>Phase 3 — Token Launch</li>
-<li>Phase 4 — Listings</li>
-<li>Phase 5 — Meme Domination</li></ul></div><!-- MEMES --><div class="section"><h2>Meme Gallery</h2><div class="gallery"><img src="logo.png">
-<img src="logo.png">
-<img src="logo.png"></div></div><!-- COMMUNITY --><div class="section" id="community"><h2>Join The Community</h2><div class="social"><a href="https://t.me/Chicklob1" target="_blank">Telegram</a>
+<!-- COMMUNITY -->
+<div class="section" id="community">
+<h2>Join The Community</h2>
+<div class="social">
+<a href="https://t.me/Chicklob1" target="_blank">Telegram</a>
 <a href="https://x.com/chicklob01" target="_blank">X</a>
 <a href="#">Pump.fun</a>
+</div>
+</div>
 
-</div></div><!-- DISCLAIMER --><div class="section"><h2>Disclaimer</h2><p>CHICKLOB is a meme coin created for entertainment and community culture.
-Always do your own research before investing.
+</div>
 
-</p></div></div><footer>© 2026 CHICKLOB — Community Driven Meme Coin
+<footer>© 2026 Chicklob Coin — Community Driven</footer>
 
-</footer><script>
-
+<script>
+// Copy contract function
 function copyContract(){
-
-let text=document.getElementById("contract").innerText;
-
-navigator.clipboard.writeText(text);
-
-alert("Contract copied!");
-
+  let text=document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Contract copied!");
 }
 
-</script></body>
+// Generate snowflakes
+const snowContainer = document.getElementById('snow-container');
+const snowCount = 120; // lebih banyak salju
+
+for (let i = 0; i < snowCount; i++) {
+    let snow = document.createElement('div');
+    snow.classList.add('snowflake');
+    snow.style.left = Math.random() * window.innerWidth + 'px';
+    snow.style.fontSize = (Math.random() * 12 + 12) + 'px';
+    snow.style.opacity = Math.random();
+    snow.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    snow.innerText = '❄️';
+    snowContainer.appendChild(snow);
+}
+</script>
+
+</body>
 </html>

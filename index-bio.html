@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHICKLOB Link in Bio</title>
+<title>CHICKLOB Link in Bio ❄️</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
 body {
@@ -12,11 +12,40 @@ body {
   color: white;
   text-align: center;
   padding: 50px 20px;
+  overflow-x: hidden;
+  position: relative;
 }
 
+/* Snow animation */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 1em;
+  color: #fff;
+  user-select: none;
+  z-index: 9999;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Logo */
+img {
+  width: 120px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* Titles */
 h1 {
   color: #00eaff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
 }
 
 p {
@@ -24,15 +53,17 @@ p {
   font-size: 16px;
 }
 
+/* Buttons */
 a.button {
   display: block;
   margin: 10px auto;
   padding: 14px 35px;
-  background: #00eaff;
+  background: linear-gradient(90deg, #00eaff, #00ffaa);
   color: black;
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -40,18 +71,14 @@ a.button:hover {
   transform: scale(1.05);
 }
 
-/* logo kecil */
-img {
-  width: 120px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
 </style>
 </head>
 <body>
 
-<img src="logo.png" alt="CHICKLOB Logo">
+<!-- Snowflakes container -->
+<div id="snow-container"></div>
 
+<img src="logo.png" alt="CHICKLOB Logo">
 <h1>CHICKLOB ❄️</h1>
 <p>Not a chicken. Not a lobster. Something colder.</p>
 
@@ -59,6 +86,23 @@ img {
 <a href="https://t.me/Chicklob1" class="button" target="_blank">Telegram</a>
 <a href="https://x.com/chicklob01" class="button" target="_blank">X</a>
 <a href="#" class="button">DEXSCREENER</a>
+
+<script>
+// Generate snowflakes
+const snowContainer = document.getElementById('snow-container');
+const snowCount = 50; // Number of snowflakes
+
+for (let i = 0; i < snowCount; i++) {
+    let snow = document.createElement('div');
+    snow.classList.add('snowflake');
+    snow.style.left = Math.random() * window.innerWidth + 'px';
+    snow.style.fontSize = (Math.random() * 10 + 10) + 'px';
+    snow.style.opacity = Math.random();
+    snow.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    snow.innerText = '❄️';
+    snowContainer.appendChild(snow);
+}
+</script>
 
 </body>
 </html>

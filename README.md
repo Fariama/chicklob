@@ -1,92 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>CHICKLOB</title>
+🐔🦞 CHICKLOB
 
-<style>
+The Coldest Meme on Solana ❄️
 
-body{
-background:#0b1c2c;
-color:white;
-font-family:Arial;
-text-align:center;
-padding:40px;
-}
+Not a chicken.
+Not a lobster.
 
-h1{
-font-size:60px;
-margin-bottom:10px;
-}
+Something colder.
 
-h2{
-color:#00ffd5;
-}
+CHICKLOB is a community driven meme coin born from the strange and frozen corners of crypto.
+Built for memes, culture, and viral community growth.
 
-img{
-width:220px;
-margin-top:20px;
-}
+No complicated promises.
+Just memes and a cold community.
 
-.box{
-background:#132c44;
-padding:25px;
-border-radius:12px;
-margin-top:30px;
-}
+---
 
-.button{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-background:#00ffd5;
-color:black;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
+🌐 Website
 
-.button:hover{
-background:white;
-}
+https://fariama.github.io/chicklob/
 
-</style>
-</head>
+---
 
-<body>
+📱 Community
 
-<h1>🐔🦞 CHICKLOB</h1>
+Telegram
+https://t.me/Chicklob1
 
-<h2>The Coldest Meme on Solana ❄️</h2>
+X
+https://x.com/chicklob01
 
-<img src="logo.png">
+---
 
-<div class="box">
+📜 Contract Address
 
-<p>
-Chicken + Lobster = The Coldest Meme Coin on Solana.
-</p>
-
-<p>
-Built for memes. Powered by community.
-</p>
-
-<p>
-Contract Address:
-<br>
 HyBEEKVwy23rmfT8sGdLQ9jU18vSLy7RVdWVSoivpump
-</p>
 
-</div>
+---
 
-<br>
+❄️ The Origin
 
-<a class="button" href="#">BUY CHICKLOB</a>
+CHICKLOB appeared quietly in the cold corners of crypto.
 
-<a class="button" href="#">DEXSCREENER</a>
+No noise.
+No hype.
 
-<a class="button" href="#">TELEGRAM</a>
+Just memes and a growing community.
 
-<a class="button" href="#">TWITTER</a>
+---
 
-</body>
-</html>
+⚠️ Disclaimer
+
+CHICKLOB is a meme coin created for entertainment and community culture.
+Always do your own research before participating in any cryptocurrency project.

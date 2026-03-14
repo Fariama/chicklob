@@ -33,7 +33,7 @@ https://x.com/chicklob01
 
 📜 Contract Address
 
-HyBEEKVwy23rmfT8sGdLQ9jU18vSLy7RVdWVSoivpump
+0x00000000000000000000000000000000000000000
 
 ---
 

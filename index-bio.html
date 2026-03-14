@@ -28,47 +28,44 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 @keyframes fall {
   0% { transform: translateY(0) rotate(0deg); }
   100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* Logo */
-img {
+/* Logo animation */
+.logo {
   width: 120px;
   margin-bottom: 20px;
   border-radius: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
 }
 
 /* Titles */
-h1 {
-  color: #00eaff;
-  margin-bottom: 10px;
-  font-size: 32px;
-}
-
-p {
-  margin-bottom: 30px;
-  font-size: 16px;
-}
+h1 { color: #00eaff; margin-bottom: 10px; font-size: 32px; }
+p { margin-bottom: 30px; font-size: 16px; }
 
 /* Buttons */
 a.button {
   display: block;
   margin: 10px auto;
   padding: 14px 35px;
-  background: linear-gradient(90deg, #00eaff, #00ffaa);
+  background: linear-gradient(90deg,#00eaff,#00ffaa);
   color: black;
   border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
-
-a.button:hover {
-  transform: scale(1.05);
+a.button:hover{
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow:0 0 15px #00ffaa;
 }
 
 </style>
@@ -78,7 +75,7 @@ a.button:hover {
 <!-- Snowflakes container -->
 <div id="snow-container"></div>
 
-<img src="logo.png" alt="CHICKLOB Logo">
+<img src="https://raw.githubusercontent.com/Fariama/chicklob/main/logo.png" class="logo" alt="CHICKLOB Logo">
 <h1>CHICKLOB ❄️</h1>
 <p>Not a chicken. Not a lobster. Something colder.</p>
 
@@ -90,13 +87,13 @@ a.button:hover {
 <script>
 // Generate snowflakes
 const snowContainer = document.getElementById('snow-container');
-const snowCount = 50; // Number of snowflakes
+const snowCount = 70; // lebih banyak salju
 
 for (let i = 0; i < snowCount; i++) {
     let snow = document.createElement('div');
     snow.classList.add('snowflake');
     snow.style.left = Math.random() * window.innerWidth + 'px';
-    snow.style.fontSize = (Math.random() * 10 + 10) + 'px';
+    snow.style.fontSize = (Math.random() * 12 + 12) + 'px';
     snow.style.opacity = Math.random();
     snow.style.animationDuration = (Math.random() * 5 + 5) + 's';
     snow.innerText = '❄️';
